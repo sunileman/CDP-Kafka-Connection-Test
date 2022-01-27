@@ -22,7 +22,7 @@ public class SimpleProducerSASL_SSL {
         //CHANGE ME
         properties.put("ssl.truststore.location", "/home/sunilemanjee/truststore.jks");
         
-        //CHANGE
+        //CHANGE ME
         properties.put("sasl.jaas.config",
                 "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"<CDP-WORKLOAD-USER>\" password=\"<CDP-WORKLOAD-PASSWORD>\";");
 
