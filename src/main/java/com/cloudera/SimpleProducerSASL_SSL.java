@@ -10,6 +10,7 @@ public class SimpleProducerSASL_SSL {
 
     public static void main(String[] args) {
         Properties properties = new Properties();
+        //CHANGE ME
         properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "<KAFKA-BROKER>:9093,<KAFKA-BROKER>:9093,<KAFKA-BROKER>:9093");
         properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
@@ -18,8 +19,10 @@ public class SimpleProducerSASL_SSL {
         properties.put(ProducerConfig.CLIENT_ID_CONFIG, "connectivity-testing");
         properties.put("sasl.kerberos.service.name", "kafka");
 
-
+        //CHANGE ME
         properties.put("ssl.truststore.location", "/home/sunilemanjee/truststore.jks");
+        
+        //CHANGE ME
         properties.put("sasl.jaas.config",
                 "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"<CDP-WORKLOAD-USER>\" password=\"<CDP-WORKLOAD-PASSWORD>\";");
 
